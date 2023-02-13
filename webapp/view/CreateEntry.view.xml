@@ -1,0 +1,33 @@
+<mvc:View controllerName="NS.odatacrud.controller.Create"
+ xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+   xmlns="sap.m"
+ xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+  xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+  xmlns:smarttable="sap.ui.comp.smarttable"
+  
+  
+  xmlns:smartForm="sap.ui.comp.smartform" 
+  xmlns:smartField="sap.ui.comp.smartfield"
+   xmlns:form="sap.ui.layout.form"
+
+   xmlns:l="sap.ui.layout"   
+
+  >
+    <Page showNavButton="true"
+		navButtonPress="onNavBack" id="page" title="Create Entry">
+
+
+        
+
+        
+       
+
+        <content>
+       
+            <form:Form id="_IDGenForm1" >
+            
+            </form:Form>
+        </content>
+    </Page>
+</mvc:View>

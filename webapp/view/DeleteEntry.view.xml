@@ -1,0 +1,29 @@
+<mvc:View controllerName="NS.odatacrud.controller.Delete"
+ xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+   xmlns="sap.m"
+ xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+  xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+  xmlns:smarttable="sap.ui.comp.smarttable">
+    <Page id="page" title="Delete Entry">
+        <!-- Custom Header -->
+        <customHeader>
+            <OverflowToolbar id="_IDGenOverflowToolbar1">
+                <content>
+
+                    <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                    <Title id="_IDGenTitle1" text="Delete Entry" />
+                    
+                    <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+   
+                </content>
+                
+            </OverflowToolbar>
+           
+        </customHeader>
+
+        <content>
+            
+        </content>
+    </Page>
+</mvc:View>

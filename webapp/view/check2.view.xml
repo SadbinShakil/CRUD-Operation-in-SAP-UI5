@@ -1,0 +1,22 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    controllerName="NS.odatacrud.controller.check2"
+    xmlns="sap.m">
+
+    <l:VerticalLayout id="_IDGenVerticalLayout1">
+<Input id="id1" value="{ID}" />
+<Input id="name1" value="{Name}" />
+<Input id="des1" value="{Description}" />
+<Input id="rdate1" value="{ReleaseDate}" />
+<Input id="ddate1" value="{DiscontinuedDate}" />
+<Input id="rating1" value="{Rating}" />
+<Input id="price1" value="{Price}" />
+
+<Button id="submitButton" text="Submit" press="onCheck" />
+
+    </l:VerticalLayout>
+
+</mvc:View>

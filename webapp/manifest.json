@@ -1,0 +1,221 @@
+{
+  "_version": "1.49.0",
+  "sap.app": {
+    "id": "NS.odatacrud",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.8.5",
+      "toolsId": "d80e42c8-b48b-4b55-829e-45dbbf67e31b"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/V2/(S(hya2zqzqcl1yfosq0gkqzp05))/OData/OData.svc/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.109.3",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "NS.odatacrud.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "NS.odatacrud.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteView1",
+          "pattern": ":?query:",
+          "target": [
+            "TargetView1"
+          ]
+        },
+        {
+          "name": "View1_rawCode",
+          "pattern": "View1_rawCode/{EmpId}/{name}",
+          "target": [
+            "TargetView2"
+          ]
+        },
+        {
+          "name": "CreateEntry",
+          "pattern": "CreateEntry",
+          "target": [
+            "TargetView3"
+          ]
+        },
+        {
+          "name": "DeleteEntry",
+          "pattern": "DeleteEntry",
+          "target": [
+            "TargetView4"
+          ]
+        },
+        {
+          "name": "Details",
+          "pattern": "Details",
+          "target": [
+            "TargetView5"
+          ]
+        },
+        {
+          "name": "Demo",
+          "pattern": "Demo",
+          "target": [
+            "TargetView1"
+          ]
+        },
+        {
+          "name": "check",
+          "pattern": "check",
+          "target": [
+            "TargetView6"
+          ]
+        },
+        {
+          "name": "check2",
+          "pattern": "check2",
+          "target": [
+            "TargetView7"
+          ]
+        }
+
+      ],
+      "targets": {
+        "TargetView1": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View1",
+          "viewName": "View1"
+        },
+
+        "TargetView2": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "View1_rawCode",
+          "viewName": "View1_rawCode"
+        },
+
+        "TargetView3": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "CreateEntry",
+          "viewName": "CreateEntry"
+        },
+
+        "TargetView4": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "DeleteEntry",
+          "viewName": "DeleteEntry"
+        },
+
+        "TargetView5": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Details",
+          "viewName": "Details"
+        },
+
+        "TargetView6": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "check",
+          "viewName": "check"
+        },
+
+        "TargetView7": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "check2",
+          "viewName": "check2"
+        }
+      }
+
+      
+    },
+    "rootView": {
+      "viewName": "NS.odatacrud.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

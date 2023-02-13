@@ -1,0 +1,78 @@
+<!-- <mvc:View controllerName="NS.odatacrud.controller.Details"
+ xmlns:mvc="sap.ui.core.mvc" 
+ displayBlock="true"
+  xmlns="sap.m" 
+  xmlns:m="sap.m"
+  xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" 
+  xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+   xmlns:smarttable="sap.ui.comp.smarttable"
+   xmlns:form="sap.ui.layout.form"
+   xmlns:core="sap.ui.core"
+   >
+
+    <Page id="page" title="Details View" showNavButton="true"
+		navButtonPress=".onNavBack"> -->
+        <!-- Custom Header -->
+        <!-- <customHeader>
+            <OverflowToolbar id="_IDGenOverflowToolbar1">
+                <content>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                    <Title id="_IDGenTitle1" text="Details View" />
+
+                    <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+                </content>
+            </OverflowToolbar>
+        </customHeader> -->
+        <!-- <Table id="_IDGenTable1" >
+        <items>
+        <ColumnListItem id="_IDGenColumnListItem1" type="Navigation" press="Back">
+        </ColumnListItem></items>
+        </Table> -->
+
+
+        <!-- <content>
+            <form:Form id="_IDGenForm1" editable="true" >
+                <form:title>
+                    <core:Title id="_IDGenTitle3" text="" />
+                </form:title>
+                <form:layout>
+                    <form:ResponsiveGridLayout id="_IDGenResponsiveGridLayout1" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" />
+                </form:layout>
+                <form:formContainers>
+                    <form:FormContainer id="_IDGenFormContainer1">
+                        <form:formElements>
+                            <form:FormElement id="_IDGenFormElement1" label="Hello">
+                                <form:fields>
+                                    <Input id="_IDGenInput1" value="Hey" editable="false" />
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                    </form:FormContainer>
+                </form:formContainers>
+            </form:Form> -->
+            <!-- <footer>
+			<m:OverflowToolbar id="_IDGenOverflowToolbar2">
+				<m:ToolbarSpacer id="_IDGenToolbarSpacer3"/>
+				<m:Button id="_IDGenButton1" type="Accept" text="Save"/>
+				<m:Button id="_IDGenButton2" type="Reject" text="Cancel"/>
+			</m:OverflowToolbar>
+		</footer> -->
+        <!-- </content>
+    </Page>
+</mvc:View> -->
+
+
+
+<mvc:View
+	controllerName="NS.odatacrud.controller.Details"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page id="_IDGenPage1"
+		title="{Details}"
+		showNavButton="true"
+		navButtonPress=".onNavBack">
+		<ObjectHeader id="_IDGenObjectHeader1"
+			intro="hey"
+			title="Hello"/>
+	</Page>
+</mvc:View>

@@ -1,0 +1,109 @@
+<mvc:View controllerName="NS.odatacrud.controller.View1"
+ xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+  xmlns="sap.m" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+   xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" 
+   xmlns:smarttable="sap.ui.comp.smarttable"
+   xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page id="page" title="Crud Operations With Northwind Odata Version: 2.0" class="tit">
+        <!-- Custom Header -->
+        <customHeader>
+            <OverflowToolbar id="_IDGenOverflowToolbar1">
+                <content>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                    <Title id="_IDGenTitle1" class="tit" text="Crud Operations With Northwind Odata Version: 2.0" />
+
+                    <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+                </content>
+            </OverflowToolbar>
+        </customHeader>
+
+        <content>
+
+ <html:style>
+.tit{
+    background-color:#fdbb2d;
+}
+.myText {
+background-color:#a5aba8;
+}
+.myText2 {
+<!-- margin-right:100%; -->
+
+background-color:#1aa293;
+
+}
+.foot{
+    <!-- background-color:black; -->
+ font-family: "Times New Roman", Times, Fantasy;
+ font-weight: bold;
+}
+
+          </html:style>
+
+
+
+            <smartfilterbar:SmartFilterBar id="idSmartFilterbar" entitySet="Products">
+                <Button type="Emphasized" id="_IDGenButton1" icon="sap-icon://add" text="Create Entry" press="onDel" />
+                <!-- <Button type="Emphasized" id="_IDGenButton12" icon="sap-icon://delete" text="Check" press="onDel"></Button> -->
+
+                <smartfilterbar:controlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="check" visibleInAdvancedArea="true" label="ID" key="ID"/>
+                    <smartfilterbar:ControlConfiguration id="check2" visibleInAdvancedArea="true" label="Name" key="Name" />
+                    <smartfilterbar:ControlConfiguration id="check22" visibleInAdvancedArea="true" label="Description" key="Description" />
+                    <smartfilterbar:ControlConfiguration id="check3" visibleInAdvancedArea="true" label="Rating" key="Rating" />
+                    <smartfilterbar:ControlConfiguration id="check4" visibleInAdvancedArea="true" label="Price" key="Price" />
+                </smartfilterbar:controlConfiguration>
+            </smartfilterbar:SmartFilterBar>
+<smarttable:SmartTable id="idSmarttable" smartFilterId="idSmartFilterbar"
+         entitySet="Products" enableAutoBinding="true" tableType="ResponsiveTable"
+          initiallyVisibleFields="ID,Name,Description,Price,Rating">
+    <Table updateFinished="onListUpdateFinished" id="idProducts"
+     selectionChange="handleSelectionChnage" mode="SingleSelectMaster">
+        <items>
+            <ColumnListItem id="_IDGenColumnListItem1">
+          
+                <HBox id="_IDGenHBox1">
+                    <!-- <Button app:mydata="add" id="_IDGenButton11" type="Accept" icon="sap-icon://add-activity" text="Add" press="onAdd" /> -->
+                    <Button app:mydata="edit" id="_IDGenButton2" type="Accept" icon="sap-icon://user-edit" text="Edit" press="onEdit" />
+                    <Button app:mydata="delete" id="_IDGenButton3" type="Reject" icon="sap-icon://delete" text="Delete" press="onDelete" />
+                    <Input   class="myText" id="_IDGenInput1" value="{ID}" editable="false"> </Input>
+                 </HBox>
+                  <cells>
+                    
+                    <Input class="myText2"  id="_IDGenInput2" value="{Name}" editable="false" />
+                    <Input class="myText"  id="_IDGenInput4" value="{Description}" editable="false" />
+                    <Input class="myText2"  id="_IDGenInput5" value="{Price}" editable="false" />
+                    <Input class="myText"  id="_IDGenInput6" value="{Rating}" editable="false" />
+                    <Input class="myText2" id="_IDGenInput67" value="{ReleaseDate}" editable="false" />
+                    <Input class="myText"  id="_IDGenInput7" value="{DiscontinuedDate}" editable="false" />
+                   
+                </cells>
+                
+            </ColumnListItem>
+        </items>
+    </Table>
+</smarttable:SmartTable>
+ </content>
+  <!-- <footer>
+                    <OverflowToolbar class="kii" id="_IDGenOverflowToolbar2">
+                        <ToolbarSpacer id="_IDGenToolbarSpacer3"/>
+                        <Button class="foot" id="_IDGenButton4"  text="All Rights Reserved by Sakil Sarker"> </Button>
+                    </OverflowToolbar>
+                </footer> -->
+
+
+
+
+                <footer>
+                <OverflowToolbar id="otbFooter">
+                    <!-- <Button id="_IDGenButton4" type="Transparent" text="Kebijakan dan Privasi"
+                        press="kebdanprivPress" />
+                    <Button id="_IDGenButton5" type="Transparent" text="Bantuan" press="bantuanPress" /> -->
+                    <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+                    <Label class="foot" id="_IDGenLabel1" text="© All Rights Reserved by Sakil Sarker, 2023" />
+                    
+                    <!-- <Label  id="_IDGenLabel2" text="2023" /> -->
+                </OverflowToolbar>
+            </footer>
+    </Page>
+</mvc:View>

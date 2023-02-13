@@ -1,0 +1,116 @@
+<mvc:View
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="NS.odatacrud.controller.check2"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    displayBlock="true"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+>
+    <Page showNavButton="true" navButtonPress="Back" class="tit" id="_IDGenPage1" title="Create a New Entry">
+        <content>
+
+
+ <html:style>
+.tit{
+    background-color:#fdbb2d;
+}
+.myText {
+background-color:#a5aba8;
+}
+.myText2 {
+<!-- margin-right:100%; -->
+
+background-color:#1aa293;
+
+}
+.foot{
+    <!-- background-color:black; -->
+ font-family: "Times New Roman", Times, Fantasy;
+ font-weight: bold;
+}
+
+          </html:style>
+
+
+            <Table id="tableId" width="60%" mode="Delete" delete="deleteRow" items="{/Products}">
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar1">
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                        <Button id="_IDGenButton1" icon="sap-icon://add" type="Emphasized" press="onAdd" />
+                        <Button id="_IDGenButton22" text="Submit" type="Success" press="onCheck" />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <!-- <Column id="_IDGenColumn1" width="50%">
+                        <Text id="id" text="ID" />
+                    </Column> -->
+                    <Column id="_IDGenColumn2" width="50%">
+                        <Text id="name" text="Name" />
+                    </Column>
+                    <Column id="_IDGenColumn22" width="50%">
+                        <Text id="des" text="Description" />
+                    </Column>
+
+                    <Column id="_IDGenColumn12" width="50%">
+                        <Text id="rdate" text="ReleaseDate" />
+                    </Column>
+                    <Column id="_IDGenColumn23" width="50%">
+                        <Text id="ddate" text="DiscontinuedDate" />
+                    </Column>
+                    <Column id="_IDGenColumn224" width="50%">
+                        <Text id="rating" text="Rating" />
+                    </Column>
+
+                    <Column id="_IDGenColumn222" width="50%">
+                        <Text id="price" text="Price" />
+                    </Column>
+
+                    <!-- <Column id="_IDGenColumn3" width="50%">
+<Text id="_IDGenText3" text="Submit" />
+</Column> -->
+                </columns>
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem1">
+                        <cells>
+                            <!-- <Text id="_IDGenText3" value="{ID}" /> -->
+                            <!-- <Input id="id1" value="{ID}" placeholder="" visible="false"/> -->
+                            <!-- <Text id="_IDGenText4" text="{Name}" /> -->
+                            <Input class="myText2" id="name1" value="{Name}" placeholder="" editable="false"/>
+                            <Input class="myText" id="des1" value="{Description}" placeholder="" editable="false"/>
+                            <Input class="myText2" id="rdate1" value="{ReleaseDate}" placeholder="" editable="false"/>
+                            <Input class="myText" id="ddate1" value="{DiscontinuedDate}" placeholder="" editable="false"/>
+                            <Input class="myText2" id="rating1" value="{Rating}" placeholder="" editable="false"/>
+                            <Input class="myText" id="price1" value="{Price}" placeholder="" editable="false"/>
+
+                            <!-- <Text id="_IDGenText5" text="{Rating}" /> -->
+                            <!-- <Text id="_IDGenText6" text="{Price}"/> -->
+                            <TextArea id="_IDGenTextArea1" />
+                            <!-- <Button id="_IDGenButton2" text="Submit" type="Success" press="Submitt"></Button> -->
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+                <!-- 
+<Column id="_IDGenColumn3">
+<Button id="_IDGenButton2" text="Submit" type="Success" press="Submit"></Button>
+</Column>
+</columns> -->
+            </Table>
+            <!-- <Button id="_IDGenButton22" text="Submit" type="Success" press="Submitt"></Button> -->
+        </content>
+        <footer>
+                <OverflowToolbar id="otbFooter">
+                    <!-- <Button id="_IDGenButton4" type="Transparent" text="Kebijakan dan Privasi"
+                        press="kebdanprivPress" />
+                    <Button id="_IDGenButton5" type="Transparent" text="Bantuan" press="bantuanPress" /> -->
+                    <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+                    <Label class="foot" id="_IDGenLabel1" text="© All Rights Reserved by Sakil Sarker, 2023" />
+                    
+                    <!-- <Label  id="_IDGenLabel2" text="2023" /> -->
+                </OverflowToolbar>
+            </footer>
+    </Page>
+</mvc:View>
